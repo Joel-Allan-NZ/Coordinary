@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js'
 
 export default function CheckoutForm() {
   const stripe = useStripe()
   const elements = useElements()
-  // const stripePromise = loadStripe('pk_test_HgkvWfRGO4xlhZOgDUc8QDGx')
-  const [message, setMessage] = useState(null)
+  const [message, setMessage] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
@@ -21,6 +20,7 @@ export default function CheckoutForm() {
       return
     }
 
+    // eslint-disable-next-line promise/catch-or-return
     stripe.retrievePaymentIntent(clientSecret).then(({ paymentIntent }) => {
       switch (paymentIntent.status) {
         case 'succeeded':

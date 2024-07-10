@@ -33,16 +33,6 @@ export default function Checkout(props: Props) {
       fetchdata()
       setCount(() => 1)
     }
-    // fetch('/api/v1/stripe/create-payment-intent', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     Authorization: `Bearer ${props.token}`,
-    //   },
-    //   body: JSON.stringify({ amount: props.amount }),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => setClientSecret(data.clientSecret))
   }, [
     clientSecret,
     count,

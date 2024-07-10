@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import useCharitiesInformation from '../../hooks/useCharitiesInformation'
 import DonorProvider from '../../utility/DonorProvider'
 import FollowCharityButton from '../../utility/FollowCharityButton'
+import Spinner from '../Spinner'
 
 export default function About() {
   const { charitySlug } = useParams()
@@ -13,7 +14,7 @@ export default function About() {
   } = useCharitiesInformation().info(charitySlug as string)
 
   if (isPending) {
-    console.log('loading...')
+    ;<Spinner />
   }
 
   if (isError) {

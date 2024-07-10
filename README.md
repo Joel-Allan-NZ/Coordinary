@@ -1,36 +1,19 @@
-# Boilerplate: Fullstack with Sass
+# Coordinary
 
-## Setup
+## What is it?
 
-### What's included
+A one-week 5-person full-stack project. We started the week without knowing our concept, and finished the week with Coordinary: a wish-list registry for charitable donations. For obvious reasons around charity-vetting and payment handling, this is a toy-project rather than something available for real use.
 
-This repo includes:
+## A summary of technologies used
 
-* a single, simple API endpoint (`/api/v1/fruits`)
-* frontend routing via react-router
-* an auth0 setup waiting to be configured
-* an example database module (`server/db/fruits.js`)
-* an API client module (`client/apis/fruits.js`)
-* configuration for Vitest and testing library
-* configuration for server-side debugging in VS Code
-* configuration for preprocessing css with tailwind support
+The front-end is a SPA with React and TailwindCSS. It's backed by an Express.js server, a KNEX SQLite database, and Auth0 authentication. Payment portal provided by Stripe.
 
-### Installation
+## What was my contribution?
 
-#### **From the Github UI**
+I served on the project as an informal tech-lead. I was lead trouble-shooter, took responsibility (along with our Agile Manager) for projecting time-frames, and personally solved any last minute problems.
 
-See the instructions [here](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) to use Github's feature to create a new repo from a template.
+You can see my specific commits and bug-fixes, but here's a brief summary of the large features I worked on:
 
-#### **From the command line**
-
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
-
-You can find the server running on [http://localhost:3000](http://localhost:3000) and the client running on [http://localhost:5173](http://localhost:5173).
-
----
-[Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=boilerplate-fullstack)
+- Built the Charity Admin Portal (Frontend, API, database)
+- Integrated Stripe
+- Designed the Model + Database

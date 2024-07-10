@@ -6,7 +6,6 @@ import { Outlet } from 'react-router-dom'
 export default function CharityAdminPortal() {
   return (
     <div className="h-screen w-screen">
-      {/* <AdminNav /> */}
       <div className="flex h-[90%] w-full">
         <AdminSidebar />
         <Outlet />

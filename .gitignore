@@ -18,3 +18,7 @@
 
 # Dotenv env settings
 .env
+
+#deployment files
+Dockerfile
+Procfile
